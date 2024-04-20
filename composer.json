@@ -52,6 +52,12 @@
         ],
         "start-sail": [
             "./vendor/bin/sail up -d"
+        ],
+        "stop-sail": [
+            "./vendor/bin/sail down"
+        ],
+        "run-pint": [
+            "./vendor/bin/pint"
         ]
     },
     "extra": {
