@@ -58,6 +58,15 @@ Route::middleware('auth')->group(function () {
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
         ->name('logout');
 
-    Route::resource('posts', PostController::class);
+    Route::resource('posts', PostController::class)
+        ->names([
+            'index' => 'posts.index',
+            'create' => 'posts.create',
+            'store' => 'posts.store',
+            'show' => 'posts.show',
+            'edit' => 'posts.edit',
+            'update' => 'posts.update',
+            'destroy' => 'posts.destroy',
+        ]);
 
 });
