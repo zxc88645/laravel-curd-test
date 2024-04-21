@@ -80,7 +80,9 @@ npm -v
 
 可以訪問 [https://crud.owotool.com/](https://crud.owotool.com/) 來查看一個已經架設好的範例網站。
 
-可以使用以下帳號登入範例網站：
+使用以下帳號登入範例網站：
 
 - 郵件：test@test.com
 - 密碼：88888888
+
+文章 CRUD 位於 [https://crud.owotool.com/posts](https://crud.owotool.com/posts)
