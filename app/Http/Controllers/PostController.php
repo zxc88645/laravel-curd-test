@@ -78,7 +78,7 @@ class PostController extends Controller
         $post->update($request->all());
 
         return redirect()->route('posts.index')
-            ->with('success', __('Post updated successfully'));
+            ->with('success', __('Post updated successfully.'));
     }
 
     /**
@@ -90,6 +90,6 @@ class PostController extends Controller
         $post->delete();
 
         return redirect()->route('posts.index')
-            ->with('success', __('Post deleted successfully'));
+            ->with('success', __('Post deleted successfully.'));
     }
 }
