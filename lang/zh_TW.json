@@ -84,5 +84,10 @@
     "Post deleted successfully.": "文章已成功刪除。",
     "Post not found.": "找不到文章。",
     "Post not created.": "文章未建立。",
-    "Update": "更新"
+    "Update": "更新",
+    "Create": "建立",
+    "Delete": "刪除",
+    "Edit": "編輯",
+    "View": "檢視",
+    "Are you sure?": "您確定嗎？"
 }

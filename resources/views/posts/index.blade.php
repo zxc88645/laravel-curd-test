@@ -25,6 +25,13 @@
                         {{ session('success') }}
                     </div>
 
+                    <!-- 新增文章按鈕 -->
+                    <div class="mb-4 flex items-center justify-end">
+                        <a href="{{ route('posts.create') }}" class="border rounded px-3 py-1 bg-gray-500 hover:bg-blue-600 text-white transition-colors">
+                            新增文章
+                        </a>
+                    </div>
+
                     <!-- 顯示文章清單 -->
                     <div class="overflow-x-auto">
                         <table class="min-w-full divide-y divide-gray-700">
@@ -56,12 +63,13 @@
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <div class="text-sm text-gray-300">{{ $post->updated_at }}</div>
                                     </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                        <a href="{{ route('posts.edit', $post->id) }}" class="text-blue-500 hover:text-blue-700">Edit</a>
-                                        <form action="{{ route('posts.destroy', $post->id) }}" method="POST" onsubmit="return confirm('Are you sure?');" style="display: inline;">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <a href="{{ route('posts.show', $post->id) }}" class="text-blue-500 hover:text-blue-700">{{__('View')}}</a>
+                                        <a href="{{ route('posts.edit', $post->id) }}" class="text-blue-500 hover:text-blue-700">{{__('Edit')}}</a>
+                                        <form action="{{ route('posts.destroy', $post->id) }}" method="POST" onsubmit="return confirm('{{ __('Are you sure?') }}');" style="display: inline;">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="text-red-500 hover:text-red-700">Delete</button>
+                                            <button type="submit" class="text-red-500 hover:text-red-700">{{__('Delete')}}</button>
                                         </form>
                                     </td>
                                 </tr>
