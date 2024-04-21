@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature\View\Posts;
+namespace Tests\Feature\Posts;
 
 use App\Models\Post;
 use App\Models\User;
