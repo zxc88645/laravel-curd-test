@@ -10,20 +10,8 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">  
 
-                    <!-- Session Status Toast using Alpine.js -->
-                    <div x-data="{ show: false }"
-                         x-show="show"
-                         x-transition:enter="transition ease-out duration-300"
-                         x-transition:enter-start="opacity-0"
-                         x-transition:enter-end="opacity-100"
-                         x-transition:leave="transition ease-in duration-300"
-                         x-transition:leave-start="opacity-100"
-                         x-transition:leave-end="opacity-0"
-                         x-init="$nextTick(() => { if('{{ session('success') }}') { show = true; setTimeout(() => show = false, 3000); }})"
-                         class="fixed bottom-5 right-5 bg-green-500 text-white px-4 py-2 rounded shadow-lg"
-                         style="display: none;">
-                        {{ session('success') }}
-                    </div>
+                    <!-- 通知訊息 -->
+                    <x-toast-notification :message="session('success')"/>
 
                     <!-- 新增文章按鈕 -->
                     <div class="mb-4 flex items-center justify-end">
@@ -42,7 +30,7 @@
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Content</th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Created At</th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Updated At</th>
-                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Actions</th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">{{__('Actions')}}</th>
                                 </tr>
                             </thead>
                             <tbody class="bg-gray-900 divide-y divide-gray-700">
