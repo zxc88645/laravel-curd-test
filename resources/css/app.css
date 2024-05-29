@@ -1,4 +1,4 @@
-// 引入 Tailwind CSS 的基礎樣式,包括一些基本的 HTML 元素樣式,如字型、顏色、邊框等
+// 引入 Tailwind CSS 的基礎樣式,包括一些基本的 HTML 元素樣式,如字型、顏色、邊框等,為專案提供一致的設計基礎
 @tailwind base;
 // 引入 Tailwind CSS 的元件樣式,提供一些常見的 UI 元件,如按鈕、導航列、卡片等
 @tailwind components;
