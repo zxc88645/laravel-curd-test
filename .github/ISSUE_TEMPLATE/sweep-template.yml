@@ -1,0 +1,22 @@
+name: Sweep Issue
+title: 'Sweep: '
+description: 用於處理小型漏洞、功能、重構和測試的 Sweep, 是一個由 AI 驅動的初級開發者。
+labels: sweep
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: 詳細信息
+      description: 告訴 Sweep 需要編輯的位置和內容，並提供足夠的上下文信息，便於新開發者理解代碼庫。
+      placeholder: |
+        Unit: 為 <FILE> 編寫單元測試。測試文件中的每個函數。確保測試邊緣情況。
+        Bugs: 漏洞可能在 <FILE> 中。這裡是日誌: ...
+        Features: 新的端點應該使用來自 <FILE> 的 ... 類，因為它包含 ... 邏輯。
+        Refactors: 我們正在將此函數遷移到 ... 版本，因為 ...
+  - type: input
+    id: branch
+    attributes:
+      label: Branch
+      description: 要基於的分支（可選）
+      placeholder: |
+        main
