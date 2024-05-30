@@ -1,27 +1,27 @@
-# Sweep AI turns bugs & feature requests into code changes (https://sweep.dev)
-# For details on our config file, check out our docs at https://docs.sweep.dev/usage/config
+# Sweep AI 將漏洞和功能請求轉換為代碼變更 (https://sweep.dev)
+# 有關我們配置文件的詳細信息，請查看我們的文檔：https://docs.sweep.dev/usage/config
 
-# This setting contains a list of rules that Sweep will check for. If any of these rules are broken in a new commit, Sweep will create an pull request to fix the broken rule.
+# 此設置包含 Sweep 將檢查的規則列表。如果在新提交中違反了任何這些規則，Sweep 將創建一個拉取請求以修復被破壞的規則。
 rules:
-  - "All new business logic should have corresponding unit tests."
-  - "Refactor large functions to be more modular."
-  - "Add docstrings to all functions and file headers."
+  - "所有新的業務邏輯都應該有相應的單元測試。"
+  - "重構大型函數以使其更加模塊化。"
+  - "為所有函數和文件頭添加文檔字符串。"
 
-# This is the branch that Sweep will develop from and make pull requests to. Most people use 'main' or 'master' but some users also use 'dev' or 'staging'.
+# 這是 Sweep 將從中開發並發出拉取請求的分支。大多數人使用 'main' 或 'master'，但有些用戶也使用 'dev' 或 'staging'。
 branch: 'main'
 
-# By default Sweep will read the logs and outputs from your existing Github Actions. To disable this, set this to false.
+# 默認情況下，Sweep 會讀取您現有的 Github Actions 的日誌和輸出。要禁用此功能，請將其設置為 false。
 gha_enabled: True
 
-# This is the description of your project. It will be used by sweep when creating PRs. You can tell Sweep what's unique about your project, what frameworks you use, or anything else you want.
+# 這是您的項目描述。它將被 Sweep 用於創建 PR。您可以告訴 Sweep 有關您的項目有何特別之處，您使用了哪些框架，或任何其他您想說的內容。
 #
-# Example:
+# 示例：
 #
-# description: sweepai/sweep is a python project. The main api endpoints are in sweepai/api.py. Write code that adheres to PEP8.
+# description: sweepai/sweep 是一個 python 項目。主要的 api 端點在 sweepai/api.py 中。編寫符合 PEP8 的代碼。
 description: ''
 
-# This sets whether to create pull requests as drafts. If this is set to True, then all pull requests will be created as drafts and GitHub Actions will not be triggered.
+# 這設置是否將拉取請求作為草稿創建。如果設置為 True，則所有拉取請求將作為草稿創建，並且不會觸發 GitHub Actions。
 draft: False
 
-# This is a list of directories that Sweep will not be able to edit.
+# 這是一個 Sweep 無法編輯的目錄列表。
 blocked_dirs: []
